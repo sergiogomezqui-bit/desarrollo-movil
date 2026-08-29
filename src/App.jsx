@@ -3,6 +3,7 @@ import Loader from './components/Loader'
 import ContactForm from './components/ContactForm'
 import ContactList from './components/ContactList'
 import { FAKE_CONTACTS } from './data/fakeContacts'
+import contactsHero from './assets/contacts-hero.png'
 import './App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
+        <img src={contactsHero} className="app-photo" alt="Agenda de contactos" />
         <h1>Mis Contactos</h1>
         <p>Agrega o elimina contactos de tu agenda</p>
       </header>
