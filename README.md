@@ -6,7 +6,7 @@ Proyecto de la materia **Desarrollo de Software para Plataformas Móviles** (UAO
 
 ## Demo (Netlify)
 
-🔗 **Link:** _pendiente de completar tras el deploy en Netlify_
+🔗 **Link:** https://shiny-melomakarona-b24f12.netlify.app
 
 ## Funcionalidad
 
