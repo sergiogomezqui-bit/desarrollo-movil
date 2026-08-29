@@ -1,34 +1,28 @@
-# Mis Contactos
+# Mis Contactos (PWA)
 
-App de React (JavaScript + Vite) que simula una agenda de contactos: carga datos falsos como si vinieran de un servidor, y permite agregar y eliminar contactos. En esta rama (`challenge-2`) la app se convirtió en una **PWA (Progressive Web App)**.
+Misma app del challenge-1 (agenda de contactos en React), pero convertida en PWA: se puede instalar en el celular y funciona con cache offline.
 
-Proyecto de la materia **Desarrollo de Software para Plataformas Móviles** (UAO).
+Materia: Desarrollo de Software para Plataformas Moviles (UAO).
 
-## Demo (Netlify)
+## Demo
 
-🔗 **Link:** https://shiny-melomakarona-b24f12.netlify.app
+https://shiny-melomakarona-b24f12.netlify.app
 
-## Funcionalidad
+## Que se le agrego
 
-- Muestra un loader mientras "carga" la lista inicial de contactos (simulado con `setTimeout`).
-- Carga una lista inicial de contactos falsos.
-- Permite agregar contactos con nombre y teléfono.
-- Permite eliminar contactos de la lista.
-- App dividida en componentes: `Loader`, `ContactForm`, `ContactList`, `ContactItem`.
-- Imagen ilustrativa en el componente padre (`App.jsx`).
+- Imagen en el componente padre (App.jsx)
+- manifest.json + icono propio
+- service-worker.js con estrategia hibrida de cache
+- registro del service worker en main.jsx
 
-## PWA — Estrategia híbrida del Service Worker
+## Sobre la estrategia hibrida
 
-Se implementaron los 5 pasos vistos en clase: `manifest.json` → conexión en `index.html` → `service-worker.js` en `public/` → registro en `main.jsx` → publicación en HTTPS (Netlify).
+En vez de cachear todo igual, cada tipo de recurso usa la estrategia que mas le conviene:
 
-En lugar de usar una sola estrategia de cache para todo, el `service-worker.js` aplica una estrategia distinta según el tipo de recurso:
-
-| Recurso      | Estrategia                          | Por qué                                  |
-| ------------ | ------------------------------------ | ----------------------------------------- |
-| HTML         | Network First                       | Evita servir una versión vieja de la app  |
-| JS / CSS     | Cache First                         | El nombre del archivo trae hash (Vite)    |
-| Imágenes     | Cache First + Stale While Revalidate | Prioriza rendimiento y actualiza en 2do plano |
-| APIs         | Network First                       | Siempre se prefieren datos actualizados   |
+- HTML -> network first (para no quedarte con una version vieja de la app)
+- JS y CSS -> cache first (el nombre del archivo cambia con el hash, asi que es seguro)
+- Imagenes -> cache first + stale while revalidate (rapido, y se actualiza atras)
+- Llamadas a API -> network first (siempre se prefieren datos frescos)
 
 ## Estructura
 
@@ -49,28 +43,31 @@ src/
   main.jsx
 ```
 
-## Cómo correrlo localmente
+## Correrlo local
 
 ```bash
 npm install
 npm run dev
 ```
 
-El service worker solo se activa sobre `build` de producción servido en HTTPS o `localhost`:
+El service worker no se activa con el dev server normal, hay que probarlo con el build:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Cómo instalar la app en el celular
+## Instalarla en el celular
 
-1. Abre el link de Netlify de arriba desde el navegador de tu celular (Chrome en Android o Safari en iOS).
-2. **Android (Chrome):** toca el menú (⋮) y elige **"Agregar a pantalla de inicio"** / **"Instalar app"**. También puede aparecer un banner automático de instalación.
-3. **iOS (Safari):** toca el botón de compartir (⬆️) y elige **"Agregar a pantalla de inicio"**.
-4. El ícono de la app quedará en tu pantalla de inicio y se abrirá en modo standalone (sin la barra del navegador), pudiendo funcionar offline gracias al service worker.
+Entra al link de arriba desde el navegador del celular.
 
-## Ramas
+En Android (Chrome): menu de los 3 puntos -> "Agregar a pantalla de inicio" (a veces sale solo un banner ofreciendo instalarla).
 
-- `challenge-1`: app de React base.
-- `challenge-2`: la misma app convertida en PWA (esta rama).
+En iPhone (Safari): boton de compartir -> "Agregar a pantalla de inicio".
+
+Queda un icono en el home como cualquier otra app, y abre sin la barra del navegador.
+
+## Ramas del repo
+
+- challenge-1: la app base.
+- challenge-2: esta rama, con la PWA.
