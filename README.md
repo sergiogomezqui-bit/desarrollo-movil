@@ -1,16 +1,14 @@
 # Mis Contactos
 
-App de React (JavaScript + Vite) que simula una agenda de contactos: carga datos falsos como si vinieran de un servidor, y permite agregar y eliminar contactos.
+App en React (JS + Vite) para practicar lo basico: una agenda de contactos con carga inicial simulada, y poder agregar/eliminar de la lista.
 
-Proyecto de la materia **Desarrollo de Software para Plataformas Móviles** (UAO).
+Materia: Desarrollo de Software para Plataformas Moviles (UAO).
 
-## Funcionalidad
+## Que hace
 
-- Muestra un loader mientras "carga" la lista inicial de contactos (simulado con `setTimeout`).
-- Carga una lista inicial de contactos falsos.
-- Permite agregar contactos con nombre y teléfono.
-- Permite eliminar contactos de la lista.
-- App dividida en componentes: `Loader`, `ContactForm`, `ContactList`, `ContactItem`.
+Al entrar muestra un loader un rato (simulando que trae los datos de un server), y despues carga una lista de contactos de prueba. Desde ahi se puede agregar un contacto nuevo con nombre y telefono, o eliminar cualquiera de la lista.
+
+Esta dividida en componentes para no tener todo amontonado en un solo archivo: Loader, ContactForm, ContactList y ContactItem.
 
 ## Estructura
 
@@ -27,14 +25,14 @@ src/
   main.jsx
 ```
 
-## Cómo correrlo
+## Correrlo local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Ramas
+## Ramas del repo
 
-- `challenge-1`: app de React base (esta rama).
-- `challenge-2`: la misma app convertida en PWA (manifest + service worker con estrategia híbrida).
+- challenge-1: esta app (la base).
+- challenge-2: la misma app pero convertida en PWA.
