@@ -1,0 +1,11 @@
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem 0;
+}
