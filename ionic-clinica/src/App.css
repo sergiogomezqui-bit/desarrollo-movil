@@ -1,0 +1,27 @@
+.login-content {
+  --background: linear-gradient(135deg, #0d7377, #14a3ac);
+  display: flex;
+  align-items: center;
+}
+
+.login-card {
+  max-width: 400px;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.login-title {
+  color: #0d7377;
+  margin-bottom: 0;
+}
+
+.login-hint {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.tabs-outlet {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
