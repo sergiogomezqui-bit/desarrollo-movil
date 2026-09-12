@@ -128,9 +128,9 @@ ionic-clinica/src/
 
 ## Condiciones del parcial
 
-- ✅ No se usó backend, todo corre del lado del cliente.
-- ✅ Toda la persistencia es con `localStorage` en las dos apps.
-- ✅ Cada app usa sus propias llaves de `localStorage`, o sea que no comparten la info de los pacientes entre ellas.
+-  No se usó backend, todo corre del lado del cliente.
+-  Toda la persistencia es con `localStorage` en las dos apps.
+-  Cada app usa sus propias llaves de `localStorage`, o sea que no comparten la info de los pacientes entre ellas.
 
 ## Capturas
 
