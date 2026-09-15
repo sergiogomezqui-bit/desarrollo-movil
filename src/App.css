@@ -1,0 +1,23 @@
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 0;
+  color: var(--ion-color-medium);
+}
+
+.task-summary {
+  font-weight: 600;
+  color: var(--ion-color-medium);
+}
+
+.task-done {
+  text-decoration: line-through;
+  color: var(--ion-color-medium);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--ion-color-medium);
+}
