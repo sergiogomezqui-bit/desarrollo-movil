@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Sergio Gómez para Desarrollo de Software para Plataformas Móviles — UAO." />
+    <title>Sergio Gómez · Portafolio Desarrollo Móvil</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f46e5'/%3E%3Ccircle cx='50' cy='38' r='16' fill='white'/%3E%3Crect x='25' y='60' width='50' height='28' rx='8' fill='white'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
+
+    <nav class="topnav" id="topnav">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">SG</span>
+        <span class="brand-text">Sergio Gómez</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#tecnologias">Herramientas</a>
+        <a href="#entregas">Entregas</a>
+        <a class="nav-cta" href="https://github.com/sergiogomezqui-bit/desarrollo-movil" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <span class="eyebrow">Desarrollo de Software para Plataformas Móviles · UAO</span>
+        <h1>Portafolio de la materia</h1>
+        <p class="lead">
+          Un repositorio, una rama por desafío. Aquí voy subiendo cada Challenge y el Parcial a medida
+          que los entrego, con el código y una demo para probar cada uno.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entregas">Ver entregas</a>
+          <a class="btn btn-ghost" href="https://github.com/sergiogomezqui-bit/desarrollo-movil" target="_blank" rel="noopener">
+            Repositorio ↗
+          </a>
+        </div>
+
+        <dl class="stat-row" id="statRow">
+          <div class="stat">
+            <dt>Entregas</dt>
+            <dd id="statEntregas">—</dd>
+          </div>
+          <div class="stat">
+            <dt>Ramas</dt>
+            <dd id="statRamas">—</dd>
+          </div>
+          <div class="stat">
+            <dt>Repo</dt>
+            <dd>desarrollo-movil</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="sobre-mi">
+        <div class="section-head reveal">
+          <h2>Repo y rama por desafío</h2>
+          <p>Cada desafío tiene su propia rama dentro del mismo repositorio: su código, su README y una demo cuando aplica.</p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="tecnologias">
+        <div class="section-head reveal">
+          <h2>Herramientas</h2>
+          <p>Con qué está hecho cada entrega.</p>
+        </div>
+
+        <ul class="tech-grid reveal" id="techGrid">
+          <!-- se genera desde challenges.js -->
+        </ul>
+      </section>
+
+      <section class="section" id="entregas">
+        <div class="section-head reveal">
+          <h2>Entregas</h2>
+          <p>En orden, a medida que las voy entregando.</p>
+        </div>
+
+        <div class="filter-row reveal" id="filterRow">
+          <!-- se genera desde challenges.js -->
+        </div>
+
+        <ol class="timeline" id="timeline">
+          <!-- se genera desde challenges.js -->
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Sergio Gómez · Desarrollo de Software para Plataformas Móviles · UAO</p>
+        <a href="https://github.com/sergiogomezqui-bit/desarrollo-movil" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </footer>
+
+    <script src="/challenges.js"></script>
+  </body>
+</html>
