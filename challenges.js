@@ -61,6 +61,24 @@ const ENTREGAS = [
     rama: 'parcial-1-sergio-gomez',
     demo: true,
   },
+  {
+    tipo: 'Challenge',
+    numero: '5',
+    titulo: 'Challenge 5',
+    resumen: 'La app de tareas con registro e inicio de sesión de verdad (Firebase).',
+    tecnologias: ['ionic', 'firebase'],
+    rama: 'challenge-5',
+    demo: true,
+  },
+  {
+    tipo: 'Challenge',
+    numero: '6',
+    titulo: 'Challenge 6',
+    resumen: 'Contactos, tareas y frutas, cada uno guardado en una base de datos distinta.',
+    tecnologias: ['ionic', 'firebase', 'dexie'],
+    rama: 'challenge-6',
+    demo: true,
+  },
 ]
 
 const TECNOLOGIAS = {
@@ -68,6 +86,8 @@ const TECNOLOGIAS = {
   ionic: { nombre: 'Ionic', texto: 'Componentes con look de app móvil.' },
   pwa: { nombre: 'PWA', texto: 'Se puede instalar como app.' },
   storage: { nombre: 'localStorage', texto: 'Guarda datos en el navegador.' },
+  firebase: { nombre: 'Firebase', texto: 'Inicio de sesión y bases de datos en la nube.' },
+  dexie: { nombre: 'Dexie', texto: 'Base de datos guardada en el dispositivo.' },
 }
 
 function demoUrl(rama) {
