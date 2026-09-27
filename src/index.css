@@ -1,0 +1,30 @@
+@import '@ionic/react/css/core.css';
+@import '@ionic/react/css/normalize.css';
+@import '@ionic/react/css/structure.css';
+@import '@ionic/react/css/typography.css';
+@import '@ionic/react/css/padding.css';
+
+* {
+  box-sizing: border-box;
+}
+
+.task-done {
+  text-decoration: line-through;
+  color: var(--ion-color-medium);
+}
+
+.center-state {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--ion-color-medium);
+}
+
+.auth-card {
+  max-width: 420px;
+  margin: 0 auto;
+}
