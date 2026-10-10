@@ -79,6 +79,15 @@ const ENTREGAS = [
     rama: 'challenge-6',
     demo: true,
   },
+  {
+    tipo: 'Challenge',
+    numero: '7',
+    titulo: 'Challenge 7',
+    resumen: 'Una pantalla con un botón por cada sensor del teléfono: ubicación, cámara, movimiento, vibración y más.',
+    tecnologias: ['ionic', 'capacitor'],
+    rama: 'challenge-7',
+    demo: true,
+  },
 ]
 
 const TECNOLOGIAS = {
@@ -88,6 +97,7 @@ const TECNOLOGIAS = {
   storage: { nombre: 'localStorage', texto: 'Guarda datos en el navegador.' },
   firebase: { nombre: 'Firebase', texto: 'Inicio de sesión y bases de datos en la nube.' },
   dexie: { nombre: 'Dexie', texto: 'Base de datos guardada en el dispositivo.' },
+  capacitor: { nombre: 'Capacitor', texto: 'Permite usar la cámara, el GPS y otros sensores del teléfono.' },
 }
 
 function demoUrl(rama) {
