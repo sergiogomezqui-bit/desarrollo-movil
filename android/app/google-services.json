@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "441532863095",
+    "project_id": "desarrollo-movil-uao",
+    "storage_bucket": "desarrollo-movil-uao.firebasestorage.app",
+    "firebase_url": "https://desarrollo-movil-uao-default-rtdb.firebaseio.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441532863095:android:d23b65b0ad241462c12c72",
+        "android_client_info": {
+          "package_name": "co.edu.uao.sensores"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADKPEDTa1UXuI7Uxkz9hkGMJ4Dszu0uOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
