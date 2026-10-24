@@ -83,7 +83,7 @@ src/
 ## Cómo ejecutarlo
 
 1. Copiar `.env.example` a `.env` y completar las credenciales de Firebase (Authentication con correo/contraseña activado).
-2. Publicar las reglas con `firebase deploy --only firestore:rules`. El archivo [firestore.rules](firestore.rules) ya trae las reglas del proyecto UAO Ride y la de `scores`, porque comparten el mismo proyecto de Firebase. Sin ellas la app funciona con guardado local, pero no sincroniza ni muestra el ranking real.
+2. Publicar las reglas con `firebase deploy --only firestore:rules`. El archivo [firestore.rules](firestore.rules) trae la regla de `scores`. Sin ella la app funciona con guardado local, pero no sincroniza ni muestra el ranking real.
 3. ```bash
    npm install
    npm run dev

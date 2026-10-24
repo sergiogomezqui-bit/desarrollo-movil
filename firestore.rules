@@ -7,50 +7,7 @@ service cloud.firestore {
       return request.auth != null;
     }
 
-    function isAdmin() {
-      return signedIn() &&
-        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'admin';
-    }
-
-    // ---------------------------------------------------------------
-    // PERFILES Y ROLES (Integrante 1) - NO modificar sin avisar.
-    // Nadie puede volverse admin desde la app: el rol 'admin' solo lo
-    // asigna un admin existente o el dueno del proyecto desde la consola
-    // de Firebase (que no pasa por estas reglas).
-    // ---------------------------------------------------------------
-    match /users/{uid} {
-      allow read: if signedIn();
-
-      // Crear el propio perfil: siempre con rol 'user' (o sin rol)
-      allow create: if request.auth.uid == uid
-        && request.resource.data.keys().hasOnly(['name', 'email', 'role', 'photo', 'createdAt'])
-        && request.resource.data.get('role', 'user') == 'user';
-
-      // Editar el propio perfil: solo nombre y foto (nunca rol ni correo)
-      allow update: if (request.auth.uid == uid
-          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'photo']))
-        || isAdmin();
-
-      allow delete: if false;
-    }
-
-    // ---------------------------------------------------------------
-    // VIAJES Y CHAT (Integrante 3): reemplazar este bloque provisional
-    // por las reglas definitivas descritas en docs/TAREAS_INTEGRANTE_3.md
-    // ---------------------------------------------------------------
-    match /trips/{tripId} {
-      allow read, create, update: if signedIn();
-      allow delete: if isAdmin() || resource.data.driverId == request.auth.uid;
-
-      match /messages/{messageId} {
-        allow read, create: if signedIn();
-      }
-    }
-
-    // ---------------------------------------------------------------
-    // MISIONES (Parcial 2): puntaje de cada usuario. Todos leen el
-    // ranking; cada quien escribe solo el suyo, con puntos validos.
-    // ---------------------------------------------------------------
+    // Puntaje de cada usuario: todos leen el ranking, cada quien escribe solo el suyo
     match /scores/{uid} {
       allow read: if signedIn();
       allow create, update: if request.auth.uid == uid
