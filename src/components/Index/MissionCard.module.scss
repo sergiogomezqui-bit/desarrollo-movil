@@ -1,0 +1,22 @@
+.card {
+  margin: 12px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.locked {
+  opacity: 0.6;
+}
+
+.photo {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+}

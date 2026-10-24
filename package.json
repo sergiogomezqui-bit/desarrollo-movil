@@ -1,0 +1,35 @@
+{
+  "name": "misiones-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.2",
+    "@capacitor/camera": "^6.1.2",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/geolocation": "^6.1.0",
+    "@capacitor/haptics": "^6.0.2",
+    "@capacitor/local-notifications": "^6.1.2",
+    "@capacitor/motion": "^6.0.1",
+    "@ionic/pwa-elements": "^3.3.0",
+    "@ionic/react": "^8.4.0",
+    "@ionic/react-router": "^8.4.0",
+    "firebase": "^11.1.0",
+    "ionicons": "^7.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "sass": "^1.83.0",
+    "vite": "^5.4.11"
+  }
+}
