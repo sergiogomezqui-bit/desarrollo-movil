@@ -79,6 +79,15 @@ const ENTREGAS = [
     rama: 'challenge-6',
     demo: true,
   },
+  {
+    tipo: 'Challenge',
+    numero: '9',
+    titulo: 'Challenge 9',
+    resumen: 'Tareas con Supabase: registro, login, lista en vivo y foto de perfil con la cámara.',
+    tecnologias: ['ionic', 'supabase'],
+    rama: 'challenge-9',
+    demo: true,
+  },
 ]
 
 const TECNOLOGIAS = {
@@ -88,6 +97,7 @@ const TECNOLOGIAS = {
   storage: { nombre: 'localStorage', texto: 'Guarda datos en el navegador.' },
   firebase: { nombre: 'Firebase', texto: 'Inicio de sesión y bases de datos en la nube.' },
   dexie: { nombre: 'Dexie', texto: 'Base de datos guardada en el dispositivo.' },
+  supabase: { nombre: 'Supabase', texto: 'Inicio de sesión, base de datos y archivos en tiempo real.' },
 }
 
 function demoUrl(rama) {
