@@ -37,6 +37,14 @@ values ('avatars', 'avatars', true)
 on conflict (id) do nothing;
 
 -- Cada usuario solo escribe dentro de su carpeta (avatars/<uid>/...)
+-- "ver mis archivos" es necesaria para subir con upsert y para listar la carpeta.
+create policy "ver mis archivos" on storage.objects
+  for select to authenticated
+  using (
+    bucket_id = 'avatars'
+    and (storage.foldername(name))[1] = (select auth.uid())::text
+  );
+
 create policy "subir a mi carpeta" on storage.objects
   for insert to authenticated
   with check (
